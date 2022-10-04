@@ -8,7 +8,7 @@ int main()
   int stop = 0;
   int hr, min;
   int hrs, mins;
-  int tempo, m = 2;
+  int tempo, m = 30;
   float totalMensal[m], totalDiario = 0, totalMensal2 = 0;
   float valor;
 for(int i = 0;i < m;i++){stop = 0;totalDiario = 0;
