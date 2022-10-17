@@ -3,7 +3,7 @@
 
 int main() 
 {
-  int n = 1;
+  int n = 8;
   char placa[n];
   int stop = 0;
   int horario_entrada, minuto_de_entrada;
@@ -36,7 +36,7 @@ for(int i = 0;i < m;i++){stop = 0;totalDiario = 0;
       printf("\nO valor a ser pago referente ao veiculo de placa %s é %.2f.\n", placa, valor);
 
       totalDiario += valor;
-      printf("\nDeseja encerrar o dia? Digite (1) e para continuar digite (0):");
+      printf("\nDeseja encerrar o dia? Digite (1) para encerrar ou (o) para continuar: ");
       scanf("%d", &stop);
       }
 
