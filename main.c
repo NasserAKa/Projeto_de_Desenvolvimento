@@ -6,8 +6,8 @@ int main()
   int n = 1;
   char placa[n];
   int stop = 0;
-  int hr, min;
-  int hrs, mins;
+  int horario_entrada, minuto_de_entrada;
+  int horario_saida, minuto_de_saida;
   int tempo, m = 30;
   float totalMensal[m], totalDiario = 0, totalMensal2 = 0;
   float valor;
@@ -19,28 +19,28 @@ for(int i = 0;i < m;i++){stop = 0;totalDiario = 0;
       getchar();
 
       printf("Digite a hora de chegada no formato(00:00): ");
-      scanf("%d:%d", &hr, &min);
+      scanf("%d:%d", &horario_entrada, & minuto_de_entrada);
 
   
-      printf("Digite a hora de saída no formato(00:00): ");
-      scanf("%d:%d", &hrs, &mins);
+      printf("Digite a hora de saida no formato(00:00): ");
+      scanf("%d:%d", &horario_saida, &minuto_de_saida);
 
-      if(min > mins){
-      min += 60;
-      hr--;
+      if( minuto_de_entrada > minuto_de_saida){
+       minuto_de_entrada += 60;
+      horario_entrada--;
       }
-      tempo = (hrs - hr)*60;
-      tempo += (mins - min);
+      tempo = (horario_saida - horario_entrada)*60;
+      tempo += (minuto_de_saida -  minuto_de_entrada);
       valor = tempo * 0.05;
     
-      printf("\nO valor a ser pago referente ao veículo de placa %s é %.2f.\n", placa, valor);
+      printf("\nO valor a ser pago referente ao veiculo de placa %s é %.2f.\n", placa, valor);
 
       totalDiario += valor;
       printf("\nDeseja encerrar o dia? Digite (1) e para continuar digite (0):");
       scanf("%d", &stop);
       }
 
-printf("\nO valor recebido no dia é %.2f\n", totalDiario);
+printf("\nO valor recebido no dia e %.2f\n", totalDiario);
   totalMensal[i] = totalDiario;
   totalMensal2 += totalDiario;
   }
